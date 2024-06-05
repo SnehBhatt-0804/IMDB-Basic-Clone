@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movies</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Courier, sans-serif;
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            background-color: #032541; /* Sky Blue */
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: #032541;
+        }
+
+        #filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        select,#genre,#sort,#year {
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        #movies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .movie_item {
+            margin: 1rem;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            max-width: 500px;
+        }
+
+        .title {
+            padding-top: 16px;
+        }
+
+        option{
+          font-weight: bold;
+        }
+
+        .movie_img_rounded {
+            border-radius: 3rem;
+        }
+
+        .rating {
+            font-size: 20px;
+            padding-top: 8px;
+        }
+
+        .release_year {
+            font-size: 20px;
+            padding-top: 8px;
+        }
+    </style>
+</head>
+
+    <div id="filters" class="dropdown">
+        <select id="genre" class="form-select" aria-label="Genre">
+            
+          <option value="">All Genres</option>
+           
+        </select>
+
+        <select id="sort" class="form-select" aria-label="Sort">
+            <option value="popularity.desc">Sort by Popularity</option>
+            <option value="vote_average.desc">Sort by Rating (High to Low)</option>
+            <option value="vote_average.asc">Sort by Rating (Low to High)</option>
+        </select>
+
+        <select id="year" class="form-select" aria-label="Year">
+           
+        </select>
+    </div>
+
+    <div id="movies"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
